@@ -1,12 +1,18 @@
 package com.example.tempturecounter_0703;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,4 +27,32 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+
+    public void ChangCtoF(View view) {
+        EditText temperEditText = (EditText)findViewById(R.id.temper);
+        TextView changtempTextView = (TextView)findViewById(R.id.changtemp);
+//        Button CtoFButton = (Button)findViewById(R.id.CtoF);
+
+        int temper = Integer.parseInt(temperEditText.getText().toString());
+        int changtemp = Integer.parseInt(changtempTextView.getText().toString());
+
+        changtemp = (5/9)*(temper-32);
+        changtempTextView.setText(String.valueOf(changtemp));
+
+    }
+
+    public void ChangFtoC(View view) {
+        EditText temperEditText = (EditText)findViewById(R.id.temper);
+        TextView changtempTextView = (TextView)findViewById(R.id.changtemp);
+//        Button CtoFButton = (Button)findViewById(R.id.CtoF);
+
+        int temper = Integer.parseInt(temperEditText.getText().toString());
+        int changtemp = Integer.parseInt(changtempTextView.getText().toString());
+
+        changtemp = (9/5)*(temper+32);
+        changtempTextView.setText(String.valueOf(changtemp));
+    }
+
+
 }
