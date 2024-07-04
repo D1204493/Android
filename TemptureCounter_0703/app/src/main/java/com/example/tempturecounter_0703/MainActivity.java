@@ -32,12 +32,11 @@ public class MainActivity extends AppCompatActivity {
     public void ChangCtoF(View view) {
         EditText temperEditText = (EditText)findViewById(R.id.temper);
         TextView changtempTextView = (TextView)findViewById(R.id.changtemp);
-//        Button CtoFButton = (Button)findViewById(R.id.CtoF);
 
         int temper = Integer.parseInt(temperEditText.getText().toString());
         int changtemp = Integer.parseInt(changtempTextView.getText().toString());
 
-        changtemp = (5/9)*(temper-32);
+        changtemp = temper*5/9-32*5/9;
         changtempTextView.setText(String.valueOf(changtemp));
 
     }
@@ -45,12 +44,11 @@ public class MainActivity extends AppCompatActivity {
     public void ChangFtoC(View view) {
         EditText temperEditText = (EditText)findViewById(R.id.temper);
         TextView changtempTextView = (TextView)findViewById(R.id.changtemp);
-//        Button CtoFButton = (Button)findViewById(R.id.CtoF);
 
         int temper = Integer.parseInt(temperEditText.getText().toString());
         int changtemp = Integer.parseInt(changtempTextView.getText().toString());
 
-        changtemp = (9/5)*(temper+32);
+        changtemp = temper*9/5+32;
         changtempTextView.setText(String.valueOf(changtemp));
     }
 
