@@ -66,11 +66,16 @@ public class MainActivity extends AppCompatActivity {
         EditText num2Text = (EditText)findViewById(R.id.num2);
         TextView result = (TextView)findViewById(R.id.ans);
 
-        int input1 = Integer.parseInt(num1Text.getText().toString());
-        int input2 = Integer.parseInt(num2Text.getText().toString());
-        double answer = input1 / input2;
+        double input1 = Double.parseDouble(num1Text.getText().toString());
+        double input2 = Double.parseDouble(num2Text.getText().toString());
 
-        result.setText(String.valueOf(answer));
+        if (input2 != 0) {  //以防輸入成 除0
+            double answer = input1 / input2;
+            result.setText(String.valueOf(answer));
+        } else {
+
+        }
+
     }
 
 
