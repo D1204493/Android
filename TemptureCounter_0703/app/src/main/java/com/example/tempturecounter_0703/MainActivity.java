@@ -34,9 +34,8 @@ public class MainActivity extends AppCompatActivity {
         TextView changtempTextView = (TextView)findViewById(R.id.changtemp);
 
         int temper = Integer.parseInt(temperEditText.getText().toString());
-        int changtemp = Integer.parseInt(changtempTextView.getText().toString());
+        double changtemp = (temper-32)*5/9;
 
-        changtemp = temper*5/9-32*5/9;
         changtempTextView.setText(String.valueOf(changtemp));
 
     }
