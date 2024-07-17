@@ -20,6 +20,7 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:text="新台幣存提款"
             android:textAlignment="center"
             android:textSize="34sp" />
@@ -39,7 +40,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/editTextText3"
+                android:id="@+id/money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -56,19 +57,20 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
+                android:onClick="InOutMoney"
                 android:text="存錢"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/out"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"

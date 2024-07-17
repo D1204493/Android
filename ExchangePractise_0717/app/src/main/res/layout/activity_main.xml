@@ -20,6 +20,7 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             app:srcCompat="@drawable/ntd" />
 
         <LinearLayout
@@ -46,10 +47,11 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/ntd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:onClick="GotoInOutMoney"
             android:text="新台幣存/提款"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -98,7 +100,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/usdchange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -148,7 +150,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/jpychange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"

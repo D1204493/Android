@@ -1,6 +1,10 @@
 package com.example.exchangepractise_0717;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +25,15 @@ public class WidthdrawActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void InOutMoney(View view) {
+        EditText money = (EditText) findViewById(R.id.money);
+
+        double m = Double.parseDouble(money.getText().toString());
+        Intent intent = new Intent();
+        intent.putExtra("account",m);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+
 }

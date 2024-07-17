@@ -17,8 +17,9 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:text="日圓換匯"
             android:textAlignment="center"
             android:textSize="34sp" />
@@ -81,6 +82,7 @@
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="日元換台幣"
                 android:textSize="20sp" />
@@ -89,6 +91,7 @@
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="台幣換日元"
                 android:textSize="20sp" />
