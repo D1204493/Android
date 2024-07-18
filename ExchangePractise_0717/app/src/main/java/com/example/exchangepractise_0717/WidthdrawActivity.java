@@ -26,14 +26,27 @@ public class WidthdrawActivity extends AppCompatActivity {
         });
     }
 
-    public void InOutMoney(View view) {
+    public void InMoney(View view) {
         EditText money = (EditText) findViewById(R.id.money);
 
-        double m = Double.parseDouble(money.getText().toString());
+        double m1 = Double.parseDouble(money.getText().toString());
         Intent intent = new Intent();
-        intent.putExtra("account",m);
+        intent.putExtra("account",m1);
         setResult(Activity.RESULT_OK,intent);
         finish();
     }
+
+
+    public void OutMoney(View view) {
+        EditText money = (EditText) findViewById(R.id.money);
+
+        double m2 = Double.parseDouble(money.getText().toString());
+        Intent intent = new Intent();
+        intent.putExtra("account",-m2); // 回傳負數表示提款
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+
+
 
 }

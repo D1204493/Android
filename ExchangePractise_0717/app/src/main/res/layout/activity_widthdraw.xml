@@ -64,7 +64,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:onClick="InOutMoney"
+                android:onClick="InMoney"
                 android:text="存錢"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -75,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="OutMoney"
                 android:text="領錢"
                 android:textSize="20sp" />
         </LinearLayout>

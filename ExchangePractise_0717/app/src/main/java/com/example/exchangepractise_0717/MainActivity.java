@@ -20,7 +20,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 private ActivityResultLauncher<Intent> intentActivityResultLanucher;
 private double account;
-private TextView value;
+private TextView tv_NTDMoney;
+private TextView message;
 
 
     @Override
@@ -40,41 +41,45 @@ private TextView value;
                     @Override
                     public void onActivityResult(ActivityResult result) {
                         //寫另一個Activity回傳後，得到回傳的資料之後的做法
+                                    // 檢查回傳資料和結果碼
                         if(result.getData() != null && result.getResultCode() == Activity.RESULT_OK) {
-                            account = result.getData().getDoubleExtra("account",-1);
-                            updateAccount();
+                            // 從回傳資料中提取 "account" 資料
+                            double transactionAmount = result.getData().getDoubleExtra("account",-1);
+                            //更新帳戶金額
+                            account += transactionAmount;
+                            // 更新帳戶顯示
+                            updateAccount(); //方法，寫在下面。
                         }
-
                     }
                 }
         );
+
     }
 
     public void GotoInOutMoney(View view) {
         Intent intent = new Intent(this, WidthdrawActivity.class);
-
-//        if(value != null) {
-//            value.setTextColor(Color.parseColor("#000000"));
-//            description.setTextColor(Color.parseColor("#000000"));
-//        }
-
         intentActivityResultLanucher.launch(intent);
     }
 
 
     public void updateAccount() {
         TextView tv_NTDMoney = (TextView) findViewById(R.id.NTDmoney);
-        tv_NTDMoney.setText(String.valueOf(account));
-
-        value = (TextView) findViewById(R.id.NTDmoney);
-
-        String alert = "交易成功";
-        //Set Name
         TextView message = (TextView) findViewById(R.id.message);
-        message.setText(alert);
-        message.setTextColor(Color.parseColor("#00CC00"));
+
+        if(account >= 0) {
+            tv_NTDMoney.setText(String.valueOf(account));
+            //Set message Name
+            message.setText("交易成功");
+            message.setTextColor(Color.parseColor("#00CC00"));
+        } else {
+            tv_NTDMoney.setText(String.valueOf(account));
+            //Set message Name
+            message.setText("餘額不足，交易失敗");
+            message.setTextColor(Color.parseColor("#CC0000"));
+        }
 
     }
+
 
 
 }
