@@ -39,7 +39,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/J_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -63,7 +63,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/J_exchange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -84,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="ChangeJPYtoNTD"
                 android:text="日元換台幣"
                 android:textSize="20sp" />
 
@@ -93,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="ChangeNTDtoJPY"
                 android:text="台幣換日元"
                 android:textSize="20sp" />
         </LinearLayout>

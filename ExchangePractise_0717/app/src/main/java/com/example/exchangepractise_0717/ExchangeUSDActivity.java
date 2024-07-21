@@ -1,6 +1,10 @@
 package com.example.exchangepractise_0717;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +25,34 @@ public class ExchangeUSDActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    //美金轉台幣
+    public void ChangeUSDtoNTD(View view) {
+        EditText money_usd = (EditText) findViewById(R.id.money_usd);
+        EditText exchange_usd = (EditText) findViewById(R.id.exchange_usd);
+
+        double m = Double.parseDouble(money_usd.getText().toString());
+        double e = Double.parseDouble(exchange_usd.getText().toString());
+        double ans = m * e;
+        Intent intent = new Intent();
+        intent.putExtra("ANS",ans);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+
+    //台幣轉美金
+    public void ChangeNTDtoUSA(View view) {
+        EditText money_usd = (EditText) findViewById(R.id.money_usd);
+        EditText exchange_usd = (EditText) findViewById(R.id.exchange_usd);
+
+        double m = Double.parseDouble(money_usd.getText().toString());
+        double e = Double.parseDouble(exchange_usd.getText().toString());
+        double ans = m / e;
+        Intent intent = new Intent();
+        intent.putExtra("ANS",ans);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+
+
 }

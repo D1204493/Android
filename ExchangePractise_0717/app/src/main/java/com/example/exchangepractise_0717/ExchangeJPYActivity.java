@@ -1,6 +1,10 @@
 package com.example.exchangepractise_0717;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +25,34 @@ public class ExchangeJPYActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    //日幣轉台幣
+    public void ChangeJPYtoNTD(View view) {
+        EditText J_money = (EditText) findViewById(R.id.J_money);
+        EditText J_exchange = (EditText) findViewById(R.id.J_exchange);
+
+        double m = Double.parseDouble(J_money.getText().toString());
+        double e = Double.parseDouble(J_exchange.getText().toString());
+        double ans = m * e;
+        Intent intent = new Intent();
+        intent.putExtra("ANS",ans);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+
+    //台幣轉日幣
+    public void ChangeNTDtoJPY(View view) {
+        EditText J_money = (EditText) findViewById(R.id.J_money);
+        EditText J_exchange = (EditText) findViewById(R.id.J_exchange);
+
+        double m = Double.parseDouble(J_money.getText().toString());
+        double e = Double.parseDouble(J_exchange.getText().toString());
+        double ans = m / e;
+        Intent intent = new Intent();
+        intent.putExtra("ANS",ans);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+
+
 }

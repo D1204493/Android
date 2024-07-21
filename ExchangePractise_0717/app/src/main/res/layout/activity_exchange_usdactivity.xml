@@ -38,7 +38,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/money_usd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -62,7 +62,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/exchange_usd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -83,6 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="ChangeUSDtoNTD"
                 android:text="美金換台幣"
                 android:textSize="20sp" />
 
@@ -92,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="ChangeNTDtoUSA"
                 android:text="台幣換美金"
                 android:textSize="20sp" />
         </LinearLayout>
