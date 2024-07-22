@@ -26,6 +26,7 @@ public class WidthdrawActivity extends AppCompatActivity {
         });
     }
 
+    /*
     public void InMoney(View view) {
         EditText money = (EditText) findViewById(R.id.money);
 
@@ -46,6 +47,28 @@ public class WidthdrawActivity extends AppCompatActivity {
         setResult(Activity.RESULT_OK,intent);
         finish();
     }
+     */
+
+
+    public void GoTOMoney(View view) {
+        EditText money = (EditText) findViewById(R.id.money);
+        double m2 = Double.parseDouble(money.getText().toString());
+
+        Intent intent = new Intent();
+
+        if(view.getId() == R.id.in){
+            intent.putExtra("ACTION","in"); // 回傳負數表示提款
+        } else {
+            intent.putExtra("ACTION","out");
+        }
+
+        intent.putExtra("ACTION",m2);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+
+
+
 
 
 
