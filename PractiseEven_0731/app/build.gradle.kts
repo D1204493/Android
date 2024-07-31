@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.layoutpractise"
+    namespace = "com.example.practiseeven_0731"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.layoutpractise"
+        applicationId = "com.example.practiseeven_0731"
         minSdk = 30
         targetSdk = 34
         versionCode = 1
@@ -37,21 +37,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    implementation(libs.activity)
-    implementation(libs.constraintlayout)
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    implementation(libs.activity)
-    implementation(libs.constraintlayout)
     testImplementation(libs.junit)
-    testImplementation(libs.junit)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
